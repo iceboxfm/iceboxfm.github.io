@@ -1,62 +1,394 @@
 <!doctype html>
 <html lang="en">
-  <head>
+<head>
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <!-- Bootstrap CSS -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+          integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
 
     <title>Icebox Freezer Manager</title>
-  </head>
-  <body>
+</head>
+<body>
 
-    <nav class="navbar navbar-expand-lg navbar-light" style="background-color: #e3f2fd;">
-      <div class="container-fluid">
+<nav class="navbar navbar-expand-lg navbar-light" style="background-color: #e3f2fd;">
+    <div class="container-fluid">
         <a class="navbar-brand" href="#">
-          <img src="/assets/images/ice-cubes.png" alt="" width="32" class="d-inline-block align-text-top">
-          Icebox Freezer Manager
+            <img src="/assets/images/ice-cubes.png" alt="" width="32" class="d-inline-block align-text-top">
+            Icebox Freezer Manager
         </a>
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+                aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
-          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-            <li class="nav-item">
-              <a class="nav-link active" aria-current="page" href="/">Home</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" aria-current="page" href="#">Guide</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" aria-current="page" href="/contact.html">Contact</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#"><img src="/assets/images/android-logo.png" width="24" /> Store</a>
-            </li>
-          </ul>
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="/">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" aria-current="page" href="#">Guide</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" aria-current="page" href="/contact.html">Contact</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#"><img src="/assets/images/android-logo.png" width="24"/> Store</a>
+                </li>
+            </ul>
         </div>
-      </div>
-    </nav>
+    </div>
+</nav>
 
-    <div class="container-fluid">
-      <div class="row">
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+        crossorigin="anonymous"></script>
+
+
+<div class="container-fluid">
+    <div class="row">
         <div class="col-12">
-          <h1>User Guide</h1>
+            <h1>User Guide</h1>
+            <p class="lead">I hope that the app is mostly self-explanatory, but below I have provided some helpful
+                step-by-step guides for the various features of the app.</p>
         </div>
-      </div>
-      <div class="row">
-        <div class="col-12">
-          <p>Yes, we have documentation!</p>
-        </div>
-      </div>
-
-
     </div>
 
+    <!-- create freezer -->
+    <div class="row">
+        <div class="col-3">
+            <img src="assets/images/freezers_add_empty.png" class="img-fluid"/>
+        </div>
+        <div class="col-9">
+            <h2>Create a Freezer</h2>
+            <ol>
+                <li>From the app drawer, select the "Freezers" item to open the list of freezers.</li>
+                <li>Tap the add button - the "+" button in the lower right corner of the screen - to open the editor.
+                </li>
+                <li>
+                    <p>Fill in the freezer information (screen shown).</p>
+                    <p><strong>Description.</strong> A description of the freezer to be used as a label.</p>
+                    <p><strong>Type.</strong> The type of freezer (upright, chest, or drawer).</p>
+                    <p><strong>Shelves.</strong> An ordered list of shelves to help locate items in a freezer. These
+                        will appear in the freezer item editor as location options. Their ordering may be changed by
+                        long-pressing on one and dragging it up or down in the list.</p>
+                </li>
+                <li>When you are done, tap the "Save" button to save the data and return to the Freezer list screen.
+                </li>
+            </ol>
+        </div>
+    </div>
 
+    <hr/>
 
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
-  </body>
+    <!-- edit freezer -->
+    <div class="row">
+        <div class="col-3">
+            <img src="assets/images/freezers_editing.png" class="img-fluid"/>
+        </div>
+        <div class="col-9">
+            <h2>Edit a Freezer</h2>
+            <ol>
+                <li>From the app drawer, select the "Freezers" item to open the list of freezers.</li>
+                <li>Tap the desired freezer to open it in the editor.</li>
+                <li>
+                    <p>Update the freezer information (screen shown).</p>
+                    <p><strong>Description.</strong> A description of the freezer to be used as a label.</p>
+                    <p><strong>Type.</strong> The type of freezer (upright, chest, or drawer).</p>
+                    <p><strong>Shelves.</strong> An ordered list of shelves to help locate items in a freezer. These
+                        will appear in the freezer item editor as location options. Their ordering may be changed by
+                        long-pressing on one and dragging it up or down in the list.</p>
+                </li>
+                <li>When you are done, tap the "Save" button to save the data and return to the Freezer list screen.
+                </li>
+            </ol>
+            <p><i><strong>Note:</strong></i> You can delete a freezer, by tapping the "Delete" button while on this
+                screen.</p>
+        </div>
+    </div>
+
+    <hr/>
+
+    <!-- delete freezer -->
+    <div class="row">
+        <div class="col-3">
+            <img src="assets/images/freezers_deleting.png" class="img-fluid"/>
+        </div>
+        <div class="col-9">
+            <h2>Delete a Freezer</h2>
+            <ol>
+                <li>From the app drawer, select the "Freezers" item to open the list of freezers.</li>
+                <li>Slide the desired freezer to the left.</li>
+                <li>Tap "Yes" in the confirmation dialog to delete the item, or "No" to keep it.</li>
+            </ol>
+            <p><i><strong>Note:</strong></i> You cannot delete a freezer if it has items associated with it. You will
+                need to remove the items
+                or move them to another freezer before removing the freezer itself.</p>
+        </div>
+    </div>
+
+    <hr/>
+
+    <!-- add freezer item -->
+    <div class="row">
+        <div class="col-3">
+            <img src="assets/images/items_adding.png" class="img-fluid"/>
+        </div>
+        <div class="col-9">
+            <h2>Create a Freezer Item</h2>
+            <ol>
+                <li>In the app drawer, select the "Freezer Items" option to display the list of items in your freezers
+                </li>
+                <li>To add an item, tap the floating plus button on the bottom right of the screen. The freezer item
+                    adding screen will be
+                    opened (screen shown).
+                </li>
+                <li>
+                    <p>On this screen, you can describe the item being frozen with the following fields:</p>
+                    <p><strong>Description.</strong> The description of the item being frozen - should be short and
+                        descriptive.</p>
+                    <p><strong>Quantity.</strong> The amount of the item being frozen - a count, weight, etc.</p>
+                    <p><strong>Category.</strong> A general categorization of the item.</p>
+                    <p><strong>Freezer.</strong> The freezer where this item is stored (one of the freezers from your
+                        list).</p>
+                    <p><strong>Location.</strong> The location of the item in the freezer. The "shelves" you configured
+                        in your freezer will be suggested,
+                        but any value may be entered.</p>
+                    <p><strong>Date Frozen.</strong> The date when you put the item in the freezer. It will
+                        automatically be set to today.</p>
+                    <p><strong>Good For.</strong> How long the item is good for in the freezer, before it needs to be
+                        consumed or disposed of.</p>
+                </li>
+                <li>When you are done filling in the information for the freezer item, tap the "Save" button to add it
+                    to your freezer and
+                    return to the list of items, where your item will now be in the list.
+                </li>
+            </ol>
+            <p><i><strong>Note:</strong></i> The light bulb icon next to the "Good For" selector will display a list of
+                suggested values based on the type of food
+                being stored.</p>
+        </div>
+    </div>
+
+    <hr/>
+
+    <!-- edit freezer item -->
+    <div class="row">
+        <div class="col-3">
+            <img src="assets/images/items_editing.png" class="img-fluid"/>
+        </div>
+        <div class="col-9">
+            <h2>Edit a Freezer Item</h2>
+            <ol>
+                <li>In the app drawer, select the "Freezer Items" option to display the list of items in your freezers
+                </li>
+                <li>Tap the desired item to open it in the editor screen (shown).</li>
+                <li>
+                    <p>On this screen, you can describe the item being frozen with the following fields:</p>
+                    <p><strong>Description.</strong> The description of the item being frozen - should be short and
+                        descriptive.</p>
+                    <p><strong>Quantity.</strong> The amount of the item being frozen - a count, weight, etc.</p>
+                    <p><strong>Category.</strong> A general categorization of the item.</p>
+                    <p><strong>Freezer.</strong> The freezer where this item is stored (one of the freezers from your
+                        list).</p>
+                    <p><strong>Location.</strong> The location of the item in the freezer. The "shelves" you configured
+                        in your freezer will be suggested,
+                        but any value may be entered.</p>
+                    <p><strong>Date Frozen.</strong> The date when you put the item in the freezer. It will
+                        automatically be set to today.</p>
+                    <p><strong>Good For.</strong> How long the item is good for in the freezer, before it needs to be
+                        consumed or disposed of.</p>
+                </li>
+                <li>When you are done filling in the information for the freezer item, tap the "Save" button to add it
+                    to your freezer and
+                    return to the list of items, where your item will now be in the list.
+                </li>
+            </ol>
+            <p><i><strong>Note:</strong></i> The light bulb icon next to the "Good For" selector will display a list of
+                suggested values based on the type of food
+                being stored.</p>
+        </div>
+    </div>
+
+    <hr/>
+
+    <!-- change quantity of freezer item -->
+    <div class="row">
+        <div class="col-3">
+            <img src="assets/images/items_quantity_change.png" class="img-fluid"/>
+        </div>
+        <div class="col-9">
+            <h2>Change the Quantity of a Freezer Item</h2>
+            <ol>
+                <li>In the app drawer, select the "Freezer Items" option to display the list of items in your freezers
+                </li>
+                <li>Long-press the desired item to open the quantity change dialog (shown).</li>
+                <li>Enter the new quantity information and tap "Ok" to save the changes and return to the list.</li>
+            </ol>
+        </div>
+    </div>
+
+    <hr/>
+
+    <!-- delete freezer item -->
+    <div class="row">
+        <div class="col-3">
+            <img src="assets/images/items_deleting.png" class="img-fluid"/>
+        </div>
+        <div class="col-9">
+            <h2>Delete a Freezer Item</h2>
+            <ol>
+                <li>In the app drawer, select the "Freezer Items" option to display the list of items in your freezers
+                </li>
+                <li>To delete an item from the list, slide the desired item to the left (shown).</li>
+                <li>A confirmation message will be displayed. If you select "Yes", the item will be deleted from your
+                    list of items.
+                </li>
+            </ol>
+        </div>
+    </div>
+
+    <hr/>
+
+    <!-- filter items by freezer -->
+    <div class="row">
+        <div class="col-3">
+            <img src="assets/images/filtering_by_freezer.png" class="img-fluid"/>
+        </div>
+        <div class="col-9">
+            <h2>Filtering Items By Freezer</h2>
+            <ol>
+                <li>In the app drawer, select the "Freezer Items" option to display the list of items in your
+                    freezers.
+                </li>
+                <li>Tap the freezer filter icon (snowflake) in the app header to open a list of your freezers.</li>
+                <li>Select a freezer from the list to show only the items in your list that are in the specified freezer
+                    (shown).
+                </li>
+                <li>You can clear the filter by tapping the "X" in the filter banner.</li>
+            </ol>
+            <p><i><strong>Note:</strong></i> You can use the text search and category filter while filtering by freezer.
+            </p>
+        </div>
+    </div>
+
+    <hr/>
+
+    <!-- filter items by category -->
+    <div class="row">
+        <div class="col-3">
+            <img src="assets/images/filtering_by_category.png" class="img-fluid"/>
+        </div>
+        <div class="col-9">
+            <h2>Filtering Items By Category</h2>
+            <ol>
+                <li>In the app drawer, select the "Freezer Items" option to display the list of items in your
+                    freezers.
+                </li>
+                <li>Tap the category filter icon (stacked blocks) in the app header to open a list of available
+                    categories.
+                </li>
+                <li>Select the desired category from the list to show only the items in your list that are in the
+                    specified category (shown).
+                </li>
+                <li>You can clear the filter by tapping the "X" in the filter banner.</li>
+            </ol>
+            <p><i><strong>Note:</strong></i> You can use the text search and freezer filter while filtering by category.
+            </p>
+        </div>
+    </div>
+
+    <hr/>
+
+    <!-- filter items by text -->
+    <div class="row">
+        <div class="col-3">
+            <img src="assets/images/filtering_list.png" class="img-fluid"/>
+        </div>
+        <div class="col-9">
+            <h2>Filtering Items By Text</h2>
+            <ol>
+                <li>In the app drawer, select the "Freezer Items" option to display the list of items in your
+                    freezers.
+                </li>
+                <li>Enter your filtering text into the text filter bar.</li>
+                <li>The list of freezer items will be filtered to only include items that have the text value in their
+                    description, quantity or shelf values (shown).
+                </li>
+                <li>You can clear the filter by tapping the "X" in the text filter bar.</li>
+            </ol>
+            <p><i><strong>Note:</strong></i> You can use the freezer filter and category filter while using the text
+                filter.</p>
+        </div>
+    </div>
+
+    <hr/>
+
+    <!-- sorting items -->
+    <div class="row">
+        <div class="col-3">
+            <img src="assets/images/sorting_by_description.png" class="img-fluid"/>
+        </div>
+        <div class="col-9">
+            <h2>Sorting Freezer Items</h2>
+            <ol>
+                <li>In the app drawer, select the "Freezer Items" option to display the list of items in your
+                    freezers.
+                </li>
+                <li>Tap the sorting icon (three bars) in the app header to open the sorting dialog.</li>
+                <li>Select the field to be used for sorting and the desired direction and tap "Ok"</li>
+            </ol>
+        </div>
+    </div>
+
+    <hr/>
+
+    <!-- exporting -->
+    <div class="row">
+        <div class="col-3">
+            <img src="assets/images/exporting.png" class="img-fluid"/>
+        </div>
+        <div class="col-9">
+            <h2>Exporting Data</h2>
+            <ol>
+                <li>In the app drawer, select the "Export / Import" option to open the Export/Import screen.</li>
+                <li>Select the "Export" tab (shown).</li>
+                <li>Select a folder where the exported data will be saved (you may be asked for permission).</li>
+                <li>Tap the "Export" button to generate the export data - when it is done a notification will pop up at
+                    the bottom of the screen.
+                </li>
+            </ol>
+            <p><i><strong>Note:</strong></i> The data is stored as a text file in JSON format (a standard data transfer
+                format).</p>
+        </div>
+    </div>
+
+    <hr/>
+
+    <!-- exporting -->
+    <div class="row">
+        <div class="col-3">
+            <img src="assets/images/importing.png" class="img-fluid"/>
+        </div>
+        <div class="col-9">
+            <h2>Importing Data</h2>
+            <ol>
+                <li>In the app drawer, select the "Export / Import" option to open the Export/Import screen.</li>
+                <li>Select the "Import" tab (shown).</li>
+                <li>Select the file containing the exported data you want to import (you may be asked for permission).
+                </li>
+                <li>Tap the "Import" button to generate the export data - when it is done a notification will pop up at
+                    the bottom of the screen.
+                </li>
+            </ol>
+            <p><i><strong>Warning:</strong></i> The existing data in the app will be cleared and overwritten by the
+                imported data. You should be sure that your current data has been exported as a backup before importing
+                new data.</p>
+        </div>
+    </div>
+
+</div>
+</body>
 </html>
